@@ -23,5 +23,5 @@ Aplikasi ini menerapkan prinsip **CRUD (Create, Read, Update, Delete)** yang umu
   - XAMPP (untuk server database lokal)
   - Canva (untuk desain UI/mockup)
  
-  ## Desain Mockup Aplikasi (Canva)
+## Desain Mockup Aplikasi (Canva)
 https://www.canva.com/design/DAGkVdQISmM/rtsB3hbQP4tEuWk1tHsbhw/view?utm_content=DAGkVdQISmM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0b6026d95e
