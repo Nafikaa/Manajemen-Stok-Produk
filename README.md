@@ -1,12 +1,12 @@
 # Aplikasi Manajemen Stok Produk
 
-Aplikasi ini dibuat untuk membantu pengguna dalam **mengelola stok produk** yang tersedia di gudang atau toko.  
-Dibuat menggunakan **VB.NET (Visual Basic .NET)** dengan **WinForms**, serta terhubung ke **database MySQL** menggunakan **XAMPP**.
+Aplikasi ini dibuat untuk membantu pengguna dalam mengelola stok produk yang tersedia di gudang atau toko.  
+Dibuat menggunakan C# (.Net Framework) dengan Windows Forms, serta terhubung ke database MySQL menggunakan XAMPP.
 
-Aplikasi ini memungkinkan pengguna untuk **mencatat, melihat, memperbarui, dan menghapus data produk** dengan mudah dan efisien.
+Aplikasi ini memungkinkan pengguna untuk mencatat, melihat, memperbarui, dan menghapus data produk dengan mudah dan efisien.
 
 ## Fitur Aplikasi (CRUD)
-Aplikasi ini menerapkan prinsip **CRUD (Create, Read, Update, Delete)** yang umum dalam aplikasi pengelolaan data.
+Aplikasi ini menerapkan prinsip CRUD (Create, Read, Update, Delete) yang umum dalam aplikasi pengelolaan data.
 
 - **Create**: Menambahkan data produk baru ke dalam database.
 - **Read**: Melihat daftar semua produk yang sudah tersimpan.
@@ -15,8 +15,8 @@ Aplikasi ini menerapkan prinsip **CRUD (Create, Read, Update, Delete)** yang umu
 - **Search**: Mencari produk berdasarkan **nama** atau **kode produk**.
   
 ## Teknologi yang Digunakan
-- **Bahasa Pemrograman**: VB.NET
-- **Framework**: Windows Forms (.NET)
+- **Bahasa Pemrograman**: C#
+- **Framework**: Windows Forms (.NET Framework)
 - **Database**: MySQL (melalui XAMPP)
 - **Tools**:
   - Visual Studio (untuk coding)
