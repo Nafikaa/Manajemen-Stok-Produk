@@ -1,8 +1,8 @@
-# Aplikasi Manajemen Stok Produk
+# 🗃️ Aplikasi Manajemen Stok Produk
 
 Aplikasi ini dibuat untuk membantu pengguna dalam mengelola stok produk yang tersedia di gudang atau toko.  
 Dibuat menggunakan C# (.Net Framework) dengan Windows Forms, serta terhubung ke database MySQL menggunakan XAMPP.
-Aplikasi ini memungkinkan pengguna untuk mencatat, melihat, memperbarui, dan menghapus data produk dengan mudah dan efisien.
+Aplikasi ini memungkinkan pengguna untuk menambahkan, melihat, memperbarui, dan menghapus data produk dengan mudah dan efisien. Aplikasi ini menerapkan pola desain MVC (Model View Controller).
 
 ## Fitur Aplikasi:
 - **Create (Save)**: Menambahkan data produk baru ke dalam database.
@@ -14,6 +14,7 @@ Aplikasi ini memungkinkan pengguna untuk mencatat, melihat, memperbarui, dan men
 - **Logout**: Keluar dari Form1 (Form Home) dan kembali ke Form2 (Form Login).
 - **Register**: Membuka Form3 untuk menambahkan akun user baru ke database.
 - **Back**: Kembali dari Form3 (Register) ke Form2 (Login).
+- **Check Product**: Membuka Form4 (Cek Produk) untuk menampilkan produk dan jumlah produk berdasarkan grup produk.
 
 ## Teknologi yang Digunakan
 - **Bahasa Pemrograman**: C#
@@ -31,4 +32,5 @@ https://www.canva.com/design/DAGkVdQISmM/rtsB3hbQP4tEuWk1tHsbhw/view?utm_content
 - Form2 (Form Login): Form pertama yang muncul saat aplikasi dijalankan. Digunakan untuk autentikasi pengguna sebelum mengakses aplikasi. Terdapat fitur login, exit, tampil/sembunyikan password, dan register.
 - Form1 (Form Home): Form utama setelah login berhasil. Menyediakan fitur CRUD (Create, Read, Update, Delete) untuk data produk, pencarian data, serta logout kembali ke Form2 (Form Login).
 - Form3 (Form Register): Form untuk mendaftarkan user baru. Terdapat fitur register, delete, back.
+- Form4 (Cek Produk): Form yang menampilkan produk. Fitur: Menampilkan jumlah produk per grup dan melakukan filter berdasarkan grup produk.
 - Database (MySQL): ada 2 tabel yaitu tbl_user untuk Login, tbl_crud untuk menyimpan data produk.
