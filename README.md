@@ -29,8 +29,8 @@ Aplikasi ini memungkinkan pengguna untuk menambahkan, melihat, memperbarui, dan 
 https://www.canva.com/design/DAGkVdQISmM/rtsB3hbQP4tEuWk1tHsbhw/view?utm_content=DAGkVdQISmM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0b6026d95e
 
 ## Alur Program (Event-Driven)
-- Form2 (Form Login): Form pertama yang muncul saat aplikasi dijalankan. Digunakan untuk autentikasi pengguna sebelum mengakses aplikasi. Terdapat fitur login, exit, tampil/sembunyikan password, dan register.
-- Form1 (Form Home): Form utama setelah login berhasil. Menyediakan fitur CRUD (Create, Read, Update, Delete) untuk data produk, pencarian data, serta logout kembali ke Form2 (Form Login).
-- Form3 (Form Register): Form untuk mendaftarkan user baru. Terdapat fitur register, delete, back.
-- Form4 (Cek Produk): Form yang menampilkan produk. Fitur: Menampilkan jumlah produk per grup dan melakukan filter berdasarkan grup produk.
 - Database (MySQL): ada 2 tabel yaitu tbl_user untuk Login, tbl_crud untuk menyimpan data produk.
+- Form2 (Form Login): Form pertama yang muncul saat aplikasi dijalankan. Digunakan untuk autentikasi pengguna sebelum mengakses aplikasi. Terdapat fitur login, exit, tampil/sembunyikan password, dan register.
+- Form3 (Form Register): Form untuk mendaftarkan user baru. Terdapat fitur register, delete, back.
+- Form1 (Form Home): Form utama setelah login berhasil. Menyediakan fitur CRUD (Create, Read, Update, Delete) untuk data produk, pencarian data, serta logout kembali ke Form2 (Form Login).
+- Form4 (Cek Produk): Form yang menampilkan produk. Fitur: Menampilkan jumlah produk per grup dan melakukan filter berdasarkan grup produk.
