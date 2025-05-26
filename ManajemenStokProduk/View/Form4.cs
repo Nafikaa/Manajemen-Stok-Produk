@@ -21,7 +21,6 @@ namespace ManajemenStokProduk.Views
             {
                 SetupDataGridView();
                 LoadComboGroups();
-                LoadAllProducts(); // Menampilkan produk yang belum kadaluarsa
             }
             catch (Exception ex)
             {
@@ -50,48 +49,37 @@ namespace ManajemenStokProduk.Views
             dataGridView2.Columns.Add(chkStatus);
         }
 
-        private void LoadAllProducts()
-        {
-            dataGridView2.Rows.Clear();
-            var products = controller.GetAllNonExpiredProducts();
-            foreach (var p in products)
-            {
-                dataGridView2.Rows.Add(
-                    p.NoProduk,
-                    p.NamaProduk,
-                    p.HargaPerBiji,
-                    p.HargaPerKardus,
-                    p.IsiPerKardus,
-                    p.Grup,
-                    p.ExpDate.ToString("yyyy-MM-dd"),
-                    p.Status
-                );
-            }
-
-            // Tampilkan jumlah produk di label
-            lbl_jumlahproduk.Text = "Jumlah Produk: " + products.Count;
-        }
-
+        // Memuat grup produk ke dalam ComboBox
         private void LoadComboGroups()
         {
             combo_grupproduk1.Items.Clear();
+            combo_grupproduk1.Items.Add("-- Silahkan pilih grup --"); // Tambahkan placeholder (teks petunjuk sementara dalam input yang memberi tahu pengguna apa yang harus diisi atau dipilih)
+
             var groups = controller.GetGroups();
             foreach (var group in groups)
             {
                 combo_grupproduk1.Items.Add(group);
             }
+
+            combo_grupproduk1.SelectedIndex = 0; // Set default ke placeholder
         }
 
+        // Event handler untuk ComboBox grup produk
         private void combo_grupproduk1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combo_grupproduk1.SelectedIndex == -1) return;
+            if (combo_grupproduk1.SelectedIndex <= 0) // Jangan tampilkan apa pun jika placeholder terpilih
+            {
+                dataGridView2.Rows.Clear();
+                txt_jumlahproduk.Text = "0";
+                return;
+            }
 
             string selectedGroup = combo_grupproduk1.SelectedItem.ToString();
 
             try
             {
                 dataGridView2.Rows.Clear();
-                var products = controller.GetProductsByGroupNonExpired(selectedGroup); // hanya produk tidak kadaluarsa
+                var products = controller.GetProductsByGroupNonExpired(selectedGroup); 
                 foreach (var p in products)
                 {
                     dataGridView2.Rows.Add(
@@ -105,9 +93,8 @@ namespace ManajemenStokProduk.Views
                         p.Status
                     );
                 }
-
-                // Tampilkan jumlah produk hasil filter
-                lbl_jumlahproduk.Text = "Jumlah Produk: " + products.Count;
+                
+                UpdateJumlahProduk();
             }
             catch (Exception ex)
             {
@@ -115,11 +102,18 @@ namespace ManajemenStokProduk.Views
             }
         }
 
+        // Event handler untuk tombol kembali
         private void btn_back1_Click(object sender, EventArgs e)
         {
             Form1 mainForm = new Form1();
             mainForm.Show();
             this.Close();
+        }
+
+        private void UpdateJumlahProduk()
+        {
+            int jumlah = dataGridView2.AllowUserToAddRows ? dataGridView2.Rows.Count - 1 : dataGridView2.Rows.Count;
+            txt_jumlahproduk.Text = jumlah.ToString();
         }
     }
 }
