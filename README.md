@@ -14,7 +14,7 @@ Aplikasi ini memungkinkan pengguna untuk menambahkan, melihat, memperbarui, dan 
 - **Logout**: Keluar dari Form1 (Form Home) dan kembali ke Form2 (Form Login).
 - **Register**: Membuka Form3 (Form Register) untuk menambahkan akun user baru ke database.
 - **Back**: Kembali dari Form3 (Form Register) ke Form2 (Form Login).
-- **Check Product**: Membuka Form4 (Cek Produk) untuk menampilkan produk dan jumlah produk berdasarkan grup produk.
+- **Check Product**: Membuka Form4 (Form Cek Produk) untuk menampilkan produk dan jumlah produk berdasarkan grup produk.
 
 ## Teknologi yang Digunakan
 - **Bahasa Pemrograman**: C#
@@ -33,4 +33,21 @@ https://www.canva.com/design/DAGkVdQISmM/rtsB3hbQP4tEuWk1tHsbhw/view?utm_content
 - Form2 (Form Login): Form pertama yang muncul saat aplikasi dijalankan. Digunakan untuk autentikasi pengguna sebelum mengakses aplikasi. Terdapat fitur login, exit, tampil/sembunyikan password, dan register.
 - Form3 (Form Register): Form untuk mendaftarkan user baru. Terdapat fitur register, delete, back ke Form2 (Form Login).
 - Form1 (Form Home): Form utama setelah login berhasil. Menyediakan fitur CRUD (Create, Read, Update, Delete) untuk data produk, pencarian data, Check Product, serta logout kembali ke Form2 (Form Login).
-- Form4 (Cek Produk): Form yang menampilkan data produk di DataGridView setelah user memilih grup produk (combo box).
+- Form4 (Form Cek Produk): Form yang menampilkan data produk di DataGridView setelah user memilih grup produk (combo box).
+
+## Struktur MVC (Model-View-Controller)
+- **Model**
+  - Form2 (Form Login): UserModel2.cs
+  - Form3 (Form Register): UserModel3.cs
+  - Form1 (Form Home): FormModel1.cs
+  - Form4 (Form Cek Produk): FormModel4.cs
+- **View**
+  - Form2 (Form Login): Form2.cs
+  - Form3 (Form Register): Form3.cs
+  - Form1 (Form Home): Form1.cs
+  - Form4 (Form Cek Produk): Form4.cs
+- **Controller**
+  - Form2 (Form Login): UserController2.cs
+  - Form3 (Form Register): UserController3.cs 
+  - Form1 (Form Home): FormController1.cs
+  - Form4 (Form Cek Produk): FormController4.cs 
